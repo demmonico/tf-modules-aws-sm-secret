@@ -4,22 +4,27 @@ Bootstraps a new Terraform module repo.
 
 ## Installation
 
-### Anyone
+### for Anyone
 
 - fork this repo
 - replace README.md file with our own
 - start coding
 
-### Me
+### for Me
 
 - clone repo to a new local and set upstream (as I cannot just fork my own repo in Github :/)
   ```shell
-    git clone https://github.com/userName/Repo New_Repo
-    cd New_Repo
-    git remote set-url origin https://github.com/userName/New_Repo
-    git remote add upstream https://github.com/userName/Repo
-    git push origin master
-    git push --all
+    # replace with your repo name
+    NEW_REPO_NAME=REPLACE_WITH_YOUR_REPO_NAME_WITHOUT_GIT_EXTENSION && \
+    git clone git@github.com:demmonico/terraform-modules-template.git $NEW_REPO_NAME && \
+    cd $NEW_REPO_NAME && \
+    git remote set-url origin git@github.com:demmonico/$NEW_REPO_NAME.git && \
+    git remote add upstream git@github.com:demmonico/terraform-modules-template.git && \
+    git push -u origin master && git push --all
+    
+    # so later you can sync with the original repo
+    git fetch upstream && \
+    git merge upstream/master
   ```
   More details [here](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork)
 - replace README.md file with our own
