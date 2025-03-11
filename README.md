@@ -6,7 +6,11 @@
 
 Bootstraps a new Terraform module repo.
 
-## Installation
+## Usage
+
+TODO add examples here
+
+## Development
 
 Steps:
 - fork this repo (see [clone the repo](#clone-the-repo))
@@ -52,8 +56,6 @@ Steps:
 make init
 ```
 
-
-## Usage
 
 ### Run tests
 
