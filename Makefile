@@ -27,7 +27,9 @@ git-clone-repo: ## Git clone repo
 	cd $(NEW_REPO_NAME) && \
 	git remote set-url origin $(NEW_REPO) && \
 	git remote add upstream $(ORIGIN_REPO) && \
-	git push -u origin master && git push --all
+	git push -u origin master && git push --all && \
+	@echo "Clone has been finished! New repo: $(NEW_REPO_NAME)" && \
+	@echo "Don't forget to config user if needed!"
 
 git-clone-tf-module: ORIGIN_REPO=git@github.com:demmonico/terraform-modules-template.git
 git-clone-tf-module: NEW_REPO=git@github.com:demmonico/$(NEW_REPO_NAME).git
