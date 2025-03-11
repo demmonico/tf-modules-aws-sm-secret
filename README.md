@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/github/license/demmonico/terraform-modules-template)](LICENSE)
+[![Tests](https://github.com/demmonico/terraform-modules-template/actions/workflows/tests.yml/badge.svg)](https://github.com/demmonico/terraform-modules-template/actions/workflows/tests.yml)
+![GitHub Tag](https://img.shields.io/github/v/tag/demmonico/terraform-modules-template)
+
 # Terraform Modules Template
 
 Bootstraps a new Terraform module repo.
@@ -8,6 +12,7 @@ Bootstraps a new Terraform module repo.
 
 - fork this repo
 - replace README.md file with our own
+- put new repo URL in badges
 - start coding
 
 ### for Me
@@ -28,5 +33,6 @@ Bootstraps a new Terraform module repo.
   ```
   More details [here](https://stackoverflow.com/a/10966784/8148333)
 - replace README.md file with our own
+- put new repo URL in badges
 - start coding
 
