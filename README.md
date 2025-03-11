@@ -8,18 +8,28 @@ Bootstraps a new Terraform module repo.
 
 ## Installation
 
-### for Anyone
+Steps:
+- fork this repo (see [clone the repo](#clone-the-repo))
+- replace README.md file with our own, tune other files if needed
+- run `make init` to initialize the repo and hooks (see [Initialize the repo](#initialize-the-repo) section)
+
+### Clone the repo
+
+#### for Anyone
 
 - fork this repo
 - replace README.md file with our own
 - put new repo URL in badges
 - start coding
 
-### for Me
+#### for Me
 
 - clone repo to a new local and set upstream (as I cannot just fork my own repo in Github :/)
   ```shell
-    # replace with your repo name
+    # just run Make command
+    make git-clone-tf-module
+    
+    # or do it manually
     NEW_REPO_NAME=REPLACE_WITH_YOUR_REPO_NAME_WITHOUT_GIT_EXTENSION && \
     git clone git@github.com:demmonico/terraform-modules-template.git $NEW_REPO_NAME && \
     cd $NEW_REPO_NAME && \
@@ -27,7 +37,7 @@ Bootstraps a new Terraform module repo.
     git remote add upstream git@github.com:demmonico/terraform-modules-template.git && \
     git push -u origin master && git push --all
     
-    # so later you can sync with the original repo
+    # so later you can be synced with the original repo
     git fetch upstream && \
     git merge upstream/master
   ```
@@ -35,3 +45,31 @@ Bootstraps a new Terraform module repo.
 - replace README.md file with our own
 - put new repo URL in badges
 - start coding
+
+### Initialize the repo
+
+```shell
+make init
+```
+
+
+## Usage
+
+### Run tests
+
+It triggers git pre-commit hooks
+
+```shell
+make test
+```
+
+
+## Docs
+
+### Auto-generated specs
+
+You have to add following blocvk to your README.md file to generate specs
+```md
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+```
