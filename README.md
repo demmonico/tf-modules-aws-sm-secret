@@ -35,4 +35,3 @@ Bootstraps a new Terraform module repo.
 - replace README.md file with our own
 - put new repo URL in badges
 - start coding
-
