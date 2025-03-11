@@ -1,0 +1,14 @@
+repos:
+- repo: local
+  hooks:
+    - id: terraform
+      name: Dockerised check from https://github.com/antonbabenko/pre-commit-terraform repo
+      entry: |
+        bash -c 'docker run -e "USERID=$(id -u):$(id -g)" \
+          -v $(pwd):/lint \
+          -v $(pwd)/.pre-commit-config.terraform.yaml:/lint/.pre-commit-config.yaml \
+          -w /lint \
+          ghcr.io/antonbabenko/pre-commit-terraform:latest run -a'
+      language: system
+      pass_filenames: false
+      verbose: true
