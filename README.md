@@ -66,11 +66,9 @@ make test
 ```
 
 
-## Docs
+# Auto-generated specs
 
-### Auto-generated specs
-
-You have to add following blocvk to your README.md file to generate specs
+You have to add following block to your README.md file to generate specs
 ```md
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
