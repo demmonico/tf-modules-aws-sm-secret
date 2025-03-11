@@ -26,7 +26,7 @@ Bootstraps a new Terraform module repo.
     git fetch upstream && \
     git merge upstream/master
   ```
-  More details [here](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork)
+  More details [here](https://stackoverflow.com/a/10966784/8148333)
 - replace README.md file with our own
 - start coding
 
