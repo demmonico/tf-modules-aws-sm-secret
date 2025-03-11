@@ -10,7 +10,7 @@ Bootstraps a new Terraform module repo.
 
 ```terraform
 module "secret" {
-  source = "https://github.com/demmonico/tf-modules-aws-sm-secret.git"
+  source = "git::https://github.com/demmonico/tf-modules-aws-sm-secret.git"
 
   for_each = { for _, cnf in var.secrets_config : cnf.secret_name => cnf }
 
